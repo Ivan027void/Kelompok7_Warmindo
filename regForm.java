@@ -16,6 +16,7 @@ public class regForm extends javax.swing.JFrame {
      */
     public regForm() {
         initComponents();
+        setVisible(true);
     }
 
     /**
@@ -43,7 +44,7 @@ public class regForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(74, 31, 61));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/warmindo/rsz_1rsz_indomie.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("rsz_1rsz_indomie.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(186, 79, 84));
@@ -89,7 +90,7 @@ public class regForm extends javax.swing.JFrame {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/warmindo/perscirc.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("perscirc.png"))); // NOI18N
 
         jPanel4.setBackground(new java.awt.Color(186, 79, 84));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
