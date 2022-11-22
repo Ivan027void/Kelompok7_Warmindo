@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author ahini
+ * @author Ivan Kelompok 7
  */
 public class Riwayat extends javax.swing.JFrame {
 
