@@ -495,6 +495,10 @@ public class Menu extends javax.swing.JFrame {
             new Menu().setVisible(true);
        });
     }
+    
+    class MakeFrame{
+        Menu menu = new Menu();
+    }
 
     // Variables declaration - do not modify                     
     private javax.swing.JButton BtnAddMenu1;
@@ -530,9 +534,4 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration                   
-}
-
-
-class MakeFrame{
-    Menu menu = new Menu();
 }
