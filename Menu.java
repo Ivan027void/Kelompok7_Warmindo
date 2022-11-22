@@ -461,8 +461,7 @@ public class Menu extends javax.swing.JFrame {
         //harganya
         totalharga -= harga_Mie_Rendang;
     }                                             
-
-    }                                             
+    
     /**
      * @param args the command line arguments
      */
