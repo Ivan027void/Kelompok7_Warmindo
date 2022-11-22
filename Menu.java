@@ -385,9 +385,6 @@ public class Menu extends javax.swing.JFrame {
         
         //harganya
         totalharga -= harga_Mie_Goreng;
-    private void BtnMinusMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        // TODO add your handling code here:
-
     }                                             
 
     private void BtnAddMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
@@ -463,9 +460,6 @@ public class Menu extends javax.swing.JFrame {
         //harganya
         totalharga -= harga_Mie_Rendang;
     }                                             
-
-    }                                             
-
 
     /**
      * @param args the command line arguments
