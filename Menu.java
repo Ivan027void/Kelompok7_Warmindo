@@ -163,7 +163,7 @@ public class Menu extends javax.swing.JFrame {
         LblHarga4.setText("Rp10.000");
 
         LblNamaMenu4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        LblNamaMenu4.setText("Mie Goreng");
+        LblNamaMenu4.setText("Mie Rendang");
 
         BtnAddMenu4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         BtnAddMenu4.setText("+");
@@ -172,6 +172,8 @@ public class Menu extends javax.swing.JFrame {
                 BtnAddMenu4ActionPerformed(evt);
             }
         });
+        
+
 
         LblMenu4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("mieRendang.png"))); // NOI18N
@@ -201,6 +203,13 @@ public class Menu extends javax.swing.JFrame {
 
         btnCetak.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnCetak.setText("Cetak Bukti");
+        btnCetak.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnCetakMenu4MouseClicked(evt);
+            }
+        });
+        
+        
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("qrcode.png"))); // NOI18N
@@ -363,10 +372,17 @@ public class Menu extends javax.swing.JFrame {
 
 
     //4 nama menu 
+
+        int Mie_Goreng = 0 ;
+        int Mie_Kuah = 0 ;
+        int Mie_Cabe_Ijo = 0 ;
+        int Mie_Rendang = 0 ;
+
         int Mie_Goreng   =  0 ;
         int Mie_Kuah     =  0 ;
         int Mie_Cabe_Ijo =  0 ;
         int Mie_Rendang  =  0 ;
+
         
     //harga dari menu 
         int harga_Mie_Goreng     = 10000;
@@ -377,6 +393,47 @@ public class Menu extends javax.swing.JFrame {
     //total harga
         int totalharga = 0 ;
         
+
+    private void cetakPesanan(){
+        if(Mie_Goreng>0){
+            jTextArea1.setText("Mie Goreng\t"+Integer.toString(Mie_Goreng)+"\n");
+        }
+        else{
+            jTextArea1.setText("");
+        }
+        if(Mie_Kuah>0){
+            jTextArea1.append("Mie Kuah\t"+Integer.toString(Mie_Kuah)+"\n");
+        }
+        if(Mie_Cabe_Ijo>0){
+            jTextArea1.append("Mie Cabe Ijo\t"+Integer.toString(Mie_Cabe_Ijo)+"\n");
+        }
+        if(Mie_Rendang>0){
+            jTextArea1.append("Mie Rendang\t"+Integer.toString(Mie_Rendang)+"\n");
+        }
+        
+        jTextArea1.append("\n\n\n\t\t" + "Harga Total : " + totalharga);
+    }
+        
+    private void BtnMinusMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+        if(Mie_Goreng>0){
+             Mie_Goreng -= 1 ;  
+             //harganya
+            totalharga -= harga_Mie_Goreng;
+        }
+        JmlhMenu1.setText(" "+Integer.toString(Mie_Goreng));
+        cetakPesanan();
+    }                                             
+
+    private void BtnAddMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+
+        Mie_Goreng += 1 ;
+        //harganya
+        totalharga += harga_Mie_Goreng;
+        JmlhMenu1.setText(" "+Integer.toString(Mie_Goreng));
+        cetakPesanan();
+
         
           
     private void BtnMinusMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
@@ -399,57 +456,127 @@ public class Menu extends javax.swing.JFrame {
         
         //harganya
         totalharga += harga_Mie_Goreng;
+
     }                                           
 
     private void BtnMinusMenu2ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+
+        if(Mie_Kuah>0){
+             Mie_Kuah -= 1 ;  
+             //harganya
+            totalharga -= harga_Mie_Kuah;
+        }
+        
+        JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
+        cetakPesanan();
+
         if (Mie_Kuah>0){
             Mie_Kuah -=1;
         //harganya
             totalharga -= harga_Mie_Kuah;
         } 
         JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
+
     }                                             
 
     private void BtnAddMenu2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
+
+
+        Mie_Kuah += 1 ;
+        //harganya
+        totalharga += harga_Mie_Kuah;
+
+        JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
+        cetakPesanan();
+
         Mie_Kuah += 1 ;
         JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
         
         //harganya
         totalharga += harga_Mie_Kuah;
+
     }                                           
 
     private void BtnMinusMenu3ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+
+        if(Mie_Cabe_Ijo>0){
+             Mie_Cabe_Ijo -= 1 ;
+             //harganya
+            totalharga -= harga_Mie_Cabe_Ijo;
+        }
+        JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
+        cetakPesanan();
+
         if (Mie_Cabe_Ijo > 0){
             Mie_Cabe_Ijo -=1;
         //harganya
             totalharga -= harga_Mie_Cabe_Ijo;
         } 
         JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
+
     }                                             
 
     private void BtnAddMenu3ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
+
+
+        Mie_Cabe_Ijo += 1 ;
+        //harganya
+        totalharga += harga_Mie_Cabe_Ijo;
+        JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
+        cetakPesanan();
+
         Mie_Cabe_Ijo += 1 ;
         JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
         
         //harganya
         totalharga += harga_Mie_Cabe_Ijo;
+
     }                                           
 
     private void BtnAddMenu4ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
+
+
+        Mie_Rendang += 1 ;
+        //harganya
+        totalharga += harga_Mie_Rendang;
+        JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
+        cetakPesanan();
+
         Mie_Rendang += 1 ;
         JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
         
         //harganya
         totalharga += harga_Mie_Rendang;
+
     }                                           
 
     private void BtnMinusMenu4ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+
+        if(Mie_Rendang>0){
+             Mie_Rendang -= 1 ;  
+             //harganya
+             totalharga -= harga_Mie_Rendang;
+        }
+        JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
+        cetakPesanan();
+    }
+    
+    private void BtnCetakMenu4MouseClicked(java.awt.event.MouseEvent evt) {                                              
+        // TODO add your handling code here:
+        Riwayat riwayat = new Riwayat();
+        riwayat.setVisible(true);
+        riwayat.pack();
+        riwayat.setLocationRelativeTo(null);
+        dispose();
+       
+    }     
+
         if (Mie_Rendang > 0){
             Mie_Rendang -=1;
         //harganya
@@ -462,6 +589,7 @@ public class Menu extends javax.swing.JFrame {
 
         totalharga -= harga_Mie_Rendang;
     }                                             
+
 
 
     /**
