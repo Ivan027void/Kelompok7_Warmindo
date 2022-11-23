@@ -372,17 +372,10 @@ public class Menu extends javax.swing.JFrame {
 
 
     //4 nama menu 
-
         int Mie_Goreng = 0 ;
         int Mie_Kuah = 0 ;
         int Mie_Cabe_Ijo = 0 ;
         int Mie_Rendang = 0 ;
-
-        int Mie_Goreng   =  0 ;
-        int Mie_Kuah     =  0 ;
-        int Mie_Cabe_Ijo =  0 ;
-        int Mie_Rendang  =  0 ;
-
         
     //harga dari menu 
         int harga_Mie_Goreng     = 10000;
@@ -393,7 +386,6 @@ public class Menu extends javax.swing.JFrame {
     //total harga
         int totalharga = 0 ;
         
-
     private void cetakPesanan(){
         if(Mie_Goreng>0){
             jTextArea1.setText("Mie Goreng\t"+Integer.toString(Mie_Goreng)+"\n");
@@ -433,35 +425,10 @@ public class Menu extends javax.swing.JFrame {
         totalharga += harga_Mie_Goreng;
         JmlhMenu1.setText(" "+Integer.toString(Mie_Goreng));
         cetakPesanan();
-
-        
-          
-    private void BtnMinusMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        // TODO add your handling code here:
-        if (Mie_Goreng>0){
-            Mie_Goreng -=1;
-        //harganya
-
-            totalharga -= harga_Mie_Goreng;
-        } 
-        JmlhMenu1.setText(" "+Integer.toString(Mie_Goreng));
-
-        totalharga -= harga_Mie_Goreng;
-    }                                             
-
-    private void BtnAddMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        // TODO add your handling code here:        
-        Mie_Goreng += 1 ;
-        JmlhMenu1.setText(" "+Integer.toString(Mie_Goreng));
-        
-        //harganya
-        totalharga += harga_Mie_Goreng;
-
     }                                           
 
     private void BtnMinusMenu2ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
-
         if(Mie_Kuah>0){
              Mie_Kuah -= 1 ;  
              //harganya
@@ -470,19 +437,10 @@ public class Menu extends javax.swing.JFrame {
         
         JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
         cetakPesanan();
-
-        if (Mie_Kuah>0){
-            Mie_Kuah -=1;
-        //harganya
-            totalharga -= harga_Mie_Kuah;
-        } 
-        JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
-
     }                                             
 
     private void BtnAddMenu2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-
 
         Mie_Kuah += 1 ;
         //harganya
@@ -490,18 +448,10 @@ public class Menu extends javax.swing.JFrame {
 
         JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
         cetakPesanan();
-
-        Mie_Kuah += 1 ;
-        JmlhMenu2.setText(" "+Integer.toString(Mie_Kuah));
-        
-        //harganya
-        totalharga += harga_Mie_Kuah;
-
     }                                           
 
     private void BtnMinusMenu3ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
-
         if(Mie_Cabe_Ijo>0){
              Mie_Cabe_Ijo -= 1 ;
              //harganya
@@ -509,55 +459,30 @@ public class Menu extends javax.swing.JFrame {
         }
         JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
         cetakPesanan();
-
-        if (Mie_Cabe_Ijo > 0){
-            Mie_Cabe_Ijo -=1;
-        //harganya
-            totalharga -= harga_Mie_Cabe_Ijo;
-        } 
-        JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
-
     }                                             
 
     private void BtnAddMenu3ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
 
-
         Mie_Cabe_Ijo += 1 ;
         //harganya
         totalharga += harga_Mie_Cabe_Ijo;
         JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
         cetakPesanan();
-
-        Mie_Cabe_Ijo += 1 ;
-        JmlhMenu3.setText(" "+Integer.toString(Mie_Cabe_Ijo));
-        
-        //harganya
-        totalharga += harga_Mie_Cabe_Ijo;
-
     }                                           
 
     private void BtnAddMenu4ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
 
-
         Mie_Rendang += 1 ;
         //harganya
         totalharga += harga_Mie_Rendang;
         JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
         cetakPesanan();
-
-        Mie_Rendang += 1 ;
-        JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
-        
-        //harganya
-        totalharga += harga_Mie_Rendang;
-
     }                                           
 
     private void BtnMinusMenu4ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
-
         if(Mie_Rendang>0){
              Mie_Rendang -= 1 ;  
              //harganya
@@ -576,21 +501,6 @@ public class Menu extends javax.swing.JFrame {
         dispose();
        
     }     
-
-        if (Mie_Rendang > 0){
-            Mie_Rendang -=1;
-        //harganya
-
-            totalharga -= harga_Mie_Rendang;
-        } 
-        JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
-    }
-    
-
-        totalharga -= harga_Mie_Rendang;
-    }                                             
-
-
 
     /**
      * @param args the command line arguments
