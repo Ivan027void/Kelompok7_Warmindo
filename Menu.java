@@ -384,9 +384,12 @@ public class Menu extends javax.swing.JFrame {
         if (Mie_Goreng>0){
             Mie_Goreng -=1;
         //harganya
+
             totalharga -= harga_Mie_Goreng;
         } 
         JmlhMenu1.setText(" "+Integer.toString(Mie_Goreng));
+
+        totalharga -= harga_Mie_Goreng;
     }                                             
 
     private void BtnAddMenu1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
@@ -450,11 +453,17 @@ public class Menu extends javax.swing.JFrame {
         if (Mie_Rendang > 0){
             Mie_Rendang -=1;
         //harganya
+
             totalharga -= harga_Mie_Rendang;
         } 
         JmlhMenu4.setText(" "+Integer.toString(Mie_Rendang));
     }
     
+
+        totalharga -= harga_Mie_Rendang;
+    }                                             
+
+
     /**
      * @param args the command line arguments
      */
@@ -488,6 +497,10 @@ public class Menu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> {
             new Menu().setVisible(true);
        });
+    }
+    
+    class MakeFrame{
+        Menu menu = new Menu();
     }
 
     // Variables declaration - do not modify                     
@@ -524,9 +537,4 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration                   
-}
-
-
-class MakeFrame{
-    Menu menu = new Menu();
 }
