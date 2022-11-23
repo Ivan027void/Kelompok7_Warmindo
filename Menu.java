@@ -5,15 +5,23 @@
  * @author Lenovo
  */
 
+
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 public class Menu extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuJava
      */
-    public Menu() {
+    static String pemesan;
+    public Menu(String namaPemesan) {
         initComponents();
         setVisible(true);
+        pemesan = namaPemesan;
+    }
+    
+    public Menu(){
+        
     }
 
     /**
@@ -492,8 +500,22 @@ public class Menu extends javax.swing.JFrame {
         cetakPesanan();
     }
     
+    /*Ini adalah fungsi untuk mencetak semua pesanan yg telah input
+       */
+    
+    private void cetak(){
+        JOptionPane.showMessageDialog(this,"Pesanan berhasil dilakukan");
+    }
+    
+    /*private void BtnCetakMenuActionPerformed(java.awt.event.ActionEvent evt){
+        JOptionPane.showMessageDialog(this,"Pesanan");
+    }*/
+    
     private void BtnCetakMenu4MouseClicked(java.awt.event.MouseEvent evt) {                                              
         // TODO add your handling code here:
+        cetak();
+        //bukti bukti1= new bukti(pemesan,Mie_Goreng,Mie_Kuah,Mie_Cabe_Ijo,Mie_Rendang);
+        //bukti1.display();
         Riwayat riwayat = new Riwayat();
         riwayat.setVisible(true);
         riwayat.pack();
@@ -533,12 +555,12 @@ public class Menu extends javax.swing.JFrame {
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Menu().setVisible(true);
+            new Menu(pemesan).setVisible(true);
        });
     }
     
     class MakeFrame{
-        Menu menu = new Menu();
+        Menu menu = new Menu(pemesan);
     }
 
     // Variables declaration - do not modify                     
