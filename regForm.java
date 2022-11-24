@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author RayZuhri
  */
 public class regForm extends javax.swing.JFrame {
-
+    
+    String pemesan;
     /**
      * Creates new form regForm
      */
@@ -42,7 +44,7 @@ public class regForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(74, 31, 61));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("rsz_1rsz_indomie.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_1rsz_indomie.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(186, 79, 84));
@@ -196,7 +198,8 @@ public class regForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        Menu menu = new Menu();
+        pemesan = username.getText();
+        Menu menu = new Menu(pemesan);
         menu.setVisible(true);
         menu.pack();
         dispose();
