@@ -514,8 +514,8 @@ public class Menu extends javax.swing.JFrame {
     private void BtnCetakMenu4MouseClicked(java.awt.event.MouseEvent evt) {                                              
         // TODO add your handling code here:
         cetak();
-        //bukti bukti1= new bukti(pemesan,Mie_Goreng,Mie_Kuah,Mie_Cabe_Ijo,Mie_Rendang);
-        //bukti1.display();
+        Bukti bukti1= new Bukti(pemesan,Mie_Goreng,Mie_Kuah,Mie_Cabe_Ijo,Mie_Rendang);
+        bukti1.display();
         Riwayat riwayat = new Riwayat();
         riwayat.setVisible(true);
         riwayat.pack();
