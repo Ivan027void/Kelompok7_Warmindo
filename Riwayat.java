@@ -122,6 +122,7 @@ public class Riwayat extends javax.swing.JFrame {
     public static void AddRowToJTable(Object[] dataRow)
     {
         DefaultTableModel model = (DefaultTableModel)Tabelnya.getModel();
+        Tabelnya.setAutoCreateColumnsFromModel(true);
         model.addRow(dataRow);
     }     
     
