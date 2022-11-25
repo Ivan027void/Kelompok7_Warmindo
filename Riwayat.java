@@ -17,6 +17,7 @@ public class Riwayat extends javax.swing.JFrame {
      */
     public Riwayat() {
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
