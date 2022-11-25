@@ -16,6 +16,7 @@ public class regForm extends javax.swing.JFrame {
      */
     public regForm() {
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
