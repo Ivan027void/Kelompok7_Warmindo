@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Bukti
+comment1.params=pemesan\ mieGor\ mieKuah\ mieIjo\ mieRen
+comment1.target=Bukti(java.lang.String,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=void\ display()
+numComments=3
