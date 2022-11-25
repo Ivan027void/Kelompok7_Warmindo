@@ -16,12 +16,14 @@ public class Menu extends javax.swing.JFrame {
     static String pemesan;
     public Menu(String namaPemesan) {
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
         pemesan = namaPemesan;
     }
     
     public Menu(){
          initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
