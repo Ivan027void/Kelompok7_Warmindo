@@ -522,6 +522,16 @@ public class Menu extends javax.swing.JFrame {
         riwayat.pack();
         riwayat.setLocationRelativeTo(null);
         dispose();
+        
+        String cetakPesanan;
+        cetakPesanan = ("\nMie Goreng : "+Mie_Goreng+"\nMie Kuah : "+Mie_Kuah+"\nMie Ijo : "+Mie_Cabe_Ijo+"\nMie Rendang : "+Mie_Rendang);
+        //Add to table
+                Riwayat.AddRowToJTable(new Object[]{
+                                                  pemesan,
+                                                  cetakPesanan,
+                                                  totalharga,
+                                                  java.time.LocalDate.now().toString()
+                                                });
        
     }     
 
